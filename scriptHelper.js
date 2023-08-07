@@ -54,24 +54,24 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         let cargoStatus = document.getElementById("cargoStatus");
         let launchHeading = document.getElementById("launchStatus");
 
-        pilotStatus.innerHTML = `Pilot ${pilot} Ready`;
-        copilotStatus.innerHTML = `Co-pilot ${copilot} Ready`;
+        pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
 
         if (fuelLevel < 10000) {
             list.style.visibility = "visible";
             fuelStatus.innerHTML = `${fuelLevel} liters is not enough fuel for the journey.`;
 
             // let launchHeading = document.getElementById("launchStatus");
-            launchHeading.innerHTML = "Shuttle not ready for launch";
+            launchHeading.innerHTML = "Shuttle Not Ready for Launch";
             launchHeading.style.color = "red";
         }
 
         if (cargoLevel > 10000) {
             list.style.visibility = "visible";
-            cargoStatus.innerHTML = `${cargoLevel} kg is too much mass for the shuttle to take off.`
+            cargoStatus.innerHTML = `Cargo mass too heavy for launch`
 
             // let launchHeading = document.getElementById("launchStatus");
-            launchHeading.innerHTML = "Shuttle not ready for launch";
+            launchHeading.innerHTML = "Shuttle Not Ready for Launch";
             launchHeading.style.color = "rgb(199, 37, 78)";
         }
 
@@ -81,7 +81,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             fuelStatus.innerHTML = "Fuel level high enough for launch";
             cargoStatus.innerHTML = "Cargo mass low enough for launch";
 
-            launchHeading.innerHTML = "Shuttle is ready for launch";
+            launchHeading.innerHTML = "Shuttle is Ready for Launch";
             launchHeading.style.color = "rgb(65, 159, 106)";
         }
 
