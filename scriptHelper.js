@@ -32,21 +32,21 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     
-    // let form1 = document.querySelector("form");
+    
 
     if (validateInput(pilot) == "Empty" || validateInput(copilot) == "Empty" || 
         validateInput(fuelLevel) == "Empty" || validateInput(cargoLevel) =="Empty"){
         
-            alert("All fields are required!");
+        window.alert("All fields are required!");
     } else if (validateInput(pilot) == "Is a Number" || validateInput(copilot) == "Is a Number") {
-        alert("Pilot and Co-pilot names must be strings!");
+        window.alert("Pilot and Co-pilot names must be strings!");
         
     } else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoLevel) == "Not a Number") {
-        alert("Fuel Level and Cargo Mass must be numbers!");
+        window.alert("Fuel Level and Cargo Mass must be numbers!");
         
     } else {
 
-        list.style.visibility = "visible";
+        list.style.visibility = "hidden";
 
         let pilotStatus = document.getElementById("pilotStatus");
         let copilotStatus = document.getElementById("copilotStatus");
@@ -76,7 +76,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         }
 
         if (fuelLevel >= 10000 && cargoLevel <= 10000) {
-            list.style.visibility = "hidden";
+            list.style.visibility = "visible";
 
             fuelStatus.innerHTML = "Fuel level high enough for launch";
             cargoStatus.innerHTML = "Cargo mass low enough for launch";
