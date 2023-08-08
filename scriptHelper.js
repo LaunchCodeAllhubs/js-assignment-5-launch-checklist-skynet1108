@@ -32,19 +32,19 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || 
-        validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
+    if (validateInput(pilot) == "Empty" || validateInput(copilot) == "Empty" || 
+        validateInput(fuelLevel) == "Empty" || validateInput(cargoLevel) == "Empty"){
         
         window.alert("All fields are required!");
-    } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
+    } else if (validateInput(pilot) == "Is a Number" || validateInput(copilot) == "Is a Number") {
         window.alert("Pilot and Co-pilot names must be strings!");
         
-    } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
+    } else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoLevel) == "Not a Number") {
         window.alert("Fuel Level and Cargo Mass must be numbers!");
         
     } else {
 
-        list.style.visibility = "hidden";
+        // list.style.visibility = "hidden";
 
         let pilotStatus = document.getElementById("pilotStatus");
         let copilotStatus = document.getElementById("copilotStatus");
